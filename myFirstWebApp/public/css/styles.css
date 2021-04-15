@@ -1,0 +1,343 @@
+/* === FARBEN === */
+
+/*
+Blau:         #1F4E8C
+Dunkel-Grau : #3D3F45
+Hellgrau:     #E5E5E5
+Rot:          #A62C21
+ */
+
+
+/* === GLOBAL === */
+
+
+
+body{
+  margin:0;
+  font-family: 'Raleway','Lato',"Helvetica Neue","Arial", sans-serif;
+  font-size: 16px;
+ }
+
+*{
+    box-sizing:border-box;
+}
+
+/* === GENERELLES === */
+
+.clearfix::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.wichteger-text{
+  font-weight: bold;
+}
+
+.screen-reader{
+  display: none;
+}
+
+.btn-typ-1{
+  background-color: #A62C21;
+  border: 2px solid #A62C21;
+  color: white;
+  padding: .4rem;
+}
+
+/* === NAVIGATIONSLEISTE === */
+
+.header-nav{
+  width:100%;
+  height: 50px;
+  background-color: #3D3F45;
+  position: relative;
+  font-weight: bold;
+  font-size: 1rem;
+}
+.header-nav  a >img{
+  height: 30px;
+  width: auto;
+  float: left;
+  margin: .55rem
+}
+.header-nav ul{
+  margin:0;
+  padding: 0;
+  float: right;
+  height: 100%;
+}
+.header-nav ul > li{
+  display: inline-block;
+  height: 100%;
+  padding: 0 .4rem 0 .4rem;
+}
+.header-nav  ul > li > a{
+  display: inline-block;
+  margin-top: 0.8rem;
+}
+
+.header-nav  ul > li > a:link{
+  color: #FFF;
+  text-decoration: none;
+}
+
+.header-nav  ul > li > a:hover{
+  color: #E5E5E5;
+  text-decoration: none;
+}
+
+.header-nav  ul > li > a:active{
+  color: #E5E5E5;
+  text-decoration: none;
+}
+.header-nav  ul > li > a:visited{
+  color: #FFF;
+  text-decoration: none;
+}
+
+.header-nav .col-6{
+  padding-top:0;
+  padding-bottom: 0;
+}
+
+.header-nav .container,
+.header-nav .row,
+.header-nav .col-6{
+  height: 100%;
+}
+
+/* NAVIGATIONSLEISTE MOBILE */
+
+.mobile-nav-button{
+  color: #FFF;
+  float: right;
+  font-size: 2rem;
+  border: 1px solid #FFF;
+  width: 38px;
+  height: 38px;
+  position:relative;
+  margin-top: .4rem;
+  margin-bottom: 7px;
+}
+
+.mobile-nav-button > span{
+  position: absolute;
+  bottom: -1px;
+  left:8px;
+}
+
+.mobile-nav-content >ul >li{
+  display: block;
+  background-color: #3D3F45;
+  height: 50px;
+  padding: 0 1.2rem;
+  text-align: center;
+}
+
+.mobile-nav-dropdown{
+  position: relative;
+  display:inline-block;
+  float: right;
+}
+
+.mobile-nav-content{
+  position: absolute;
+  right: 0;
+  top:50px;
+  display: none;
+
+}
+
+.mobile-nav-dropdown:hover > .mobile-nav-content{
+  display: block;
+}
+
+.active {
+  background-color: #A62C21 !important;
+}
+.mobile-nav{
+  display: none;
+}
+
+@media (max-width:768px) {
+  .desktop-nav{
+    display: none;
+  }
+  .mobile-nav{
+    display: block;
+  }
+}
+/* ===== HEADER-BANNER ======== */
+
+.header-banner{
+width: 100%;
+height: 0;
+padding-top: 20.83%;
+background: url("../images/hintergrund.jpg") no-repeat;
+background-size: contain;
+
+}
+
+.header-banner-klein{
+width: 100%;
+height: 0;
+padding-top: 15.625%;
+background: url("../images/hintergrund-klein.jpg") no-repeat;
+background-size: contain;
+
+}
+
+/* NEWSLETTER BEREICH */
+.newsletter-bereich{
+  width: 100%;
+  height: 90px;
+  background-color: #3D3F45;
+}
+
+#nb-werbetext{
+  color: white;
+  font-size: 1.2rem;
+  margin-top: 0.4rem;
+}
+
+#nb-form{
+  width: 60%;
+  float: right;
+  text-align: right;
+
+}
+
+.nb-email-input{
+  width: 60%;
+  height: 32px;
+  margin-top: 0.4rem;
+  padding: .4rem;
+  border: 2px solid white;
+}
+
+#nb-btn{
+  height: 32px;
+}
+
+@media (max-width:1823px) {
+  .nb-email-input{
+    width: 100%;
+    margin-bottom: .3rem;
+  }
+  #nb-btn{
+    width: 100%;
+  }
+}
+
+@media (max-width:1358px) {
+  .nb-email-input{
+    width: 100%;
+    margin-bottom: .3rem;
+  }
+  #nb-btn{
+    width: 100%;
+  }
+}
+@media (max-width:768px) {
+  #nb-werbetext{
+display: none;
+  }
+
+  #nb-form{
+   margin-top: 0;
+   width: 80%;
+   text-align: center;
+  }
+  .newsletter-bereich .col-4{
+    display: none;
+  }
+
+  .nb-email-input{
+    width:100%;
+    margin-bottom: .3rem;
+  }
+
+}
+
+
+
+/* ==== GRIDSYSTEM  SICHTBARKEIT ====
+ für border und alle elemente im Element mit der Klasse border
+ .border,.border *{
+  border: 1px solid #91C4FF;
+}
+
+[class*="col-"]{
+background-color: #BFDDFF;
+}
+
+p{
+  background-color: #91C4FF;
+  padding: 0;
+  margin: 0;
+  color: #FFF;
+  text-align: center;
+}
+ ==== GRIDSYSTEM ====
+ */
+
+.container{
+  width: 95%;
+  /*
+  Um das element zu zentrieren
+   Margin left:auto
+   Margin right:auto
+   */
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+row::after{
+  content: "";
+  clear: both;
+  display: block;
+}
+
+
+
+[class*="col-"]{
+  float: left;
+  min-height: 1px;
+  padding: .8rem;
+}
+
+.col-1{width: 16.666%;}
+.col-2{width: 33.333%;}
+.col-3{width: 50%;}
+.col-4{width: 66.66%;}
+.col-6{width: 100%;}
+
+
+
+/*
+
+BREAKPOINTS
+
+480 Pixel (Iphone Querformat)
+768 Pixel (IPad Hochformat)
+1024 Pixel (iPad Querformat)
+*/
+
+@media 	(max-width:1024px) {
+  .col-1{width: 33.333%;}
+}
+
+@media (max-width:768px) {
+  .col-1{width: 50%;}
+  .col-2{width: 100%;}
+  .col-3{width: 100%;}
+  .col-4{width: 100%;}
+}
+@media (max-width:480px) {
+  .col-1{width: 100%;}
+  .col-2{width: 100%;}
+  .col-3{width: 100%;}
+  .col-4{width: 100%;}
+}
